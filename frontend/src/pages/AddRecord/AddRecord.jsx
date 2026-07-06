@@ -23,9 +23,11 @@ export default function AddRecord() {
   return (
     <AppLayout title="New entry">
       <p className="text-sm text-ink-100 mb-6 max-w-xl">
-        Fields marked with <span className="text-rust">*</span> are required.
+        Fields marked with <span className="text-ochre">*</span> are required.
       </p>
-      <RecordForm onSubmit={handleSubmit} submitLabel="Save record" />
+      <div className="bg-paper rounded-card shadow-card p-6 md:p-8 max-w-xl">
+        <RecordForm onSubmit={handleSubmit} submitLabel="Save record" />
+      </div>
     </AppLayout>
   )
 }

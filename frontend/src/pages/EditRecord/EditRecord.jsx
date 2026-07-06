@@ -52,17 +52,19 @@ export default function EditRecord() {
           This record doesn't exist, or it belongs to someone else.
         </p>
       ) : (
-        <RecordForm
-          initialValues={{
-            full_name: record.full_name,
-            email: record.email,
-            mobile_number: record.mobile_number,
-            department: record.department,
-            address: record.address,
-          }}
-          onSubmit={handleSubmit}
-          submitLabel="Save changes"
-        />
+        <div className="bg-paper rounded-card shadow-card p-6 md:p-8 max-w-xl">
+          <RecordForm
+            initialValues={{
+              full_name: record.full_name,
+              email: record.email,
+              mobile_number: record.mobile_number,
+              department: record.department,
+              address: record.address,
+            }}
+            onSubmit={handleSubmit}
+            submitLabel="Save changes"
+          />
+        </div>
       )}
     </AppLayout>
   )
